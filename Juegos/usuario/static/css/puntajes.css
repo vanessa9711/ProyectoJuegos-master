@@ -1,0 +1,27 @@
+#section-container{
+    margin: 1.5em;
+    padding: 1em;
+    color: #FFFAFB;
+    border-radius: .8em;
+    border: .1em solid #131515;
+
+}
+
+.col-puntaje{
+    padding: 1em;
+    border-radius: .8em;
+    border: .1em solid #131515;
+    margin: 1em 0;
+}
+
+.col-titulo-tabla{
+    text-align: center;
+}
+
+.lista{
+    color: #131515;
+}
+
+.row-puntaje{
+    margin: 3em 0;
+}

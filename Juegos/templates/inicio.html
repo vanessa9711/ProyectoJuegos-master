@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block style_content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/inicio.css' %}">
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    
+{% endblock style_content %}
+
+{% block content %}
+<section class="section-container">
+    <!--<div class="container">
+        <div class="row">
+            <div class="col-12 col-inicio">
+              <br>
+			  <br>
+			  <br>
+            </div>
+        </div>
+    </div>-->
+	<center>
+	<div class="bienvenido" style="width: 400px; height: 120px;">
+	
+	</div>
+	</center>
+</section>
+
+<section>
+   <!-- <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-btn col-inicio">
+                <div class="btn-group-vertical btn-group-lg" role="group">
+                    <input type="button" class="btn btn-outline-primary btn-block" value="La Llorona" id="llorona">
+                    <input type="button" class="btn btn-outline-primary btn-block" value="Elude Asteroids" id="elude">
+                    <input type="button" class="btn btn-outline-primary btn-block" value="Calaveras" id="calaveras" >
+                    <input type="button" class="btn btn-outline-primary btn-block" value="2048" id="2048">
+                    <input type="button" class="btn btn-outline-primary btn-block" value="Charizard" id="charizard">
+                </div>
+            </div>
+        </div>
+    </div>-->
+	<center>
+	<div class="row">
+  <div class="col-sm-6 col-md-4" id="espacio" >
+    <div class="thumbnail llorona" id="espacios2">
+        <div class="caption">
+        <h3>La llorona</h3>
+		</div>
+	  
+    </div>
+	<p>
+          <a href="#" class="btn btn-primary" role="button" value="La Llorona" id="llorona">Jugar</a>
+          
+        </p>
+  </div>
+  <div class="col-sm-6 col-md-4" id="espacio">
+    <div class="thumbnail asteroides" id="espacios2">
+      <div class="caption">
+        <h3>Asteroides</h3>
+       
+        
+		
+      </div>
+    </div>
+	<p>
+          <a href="#" class="btn btn-primary" role="button" value="Elude Asteroids" id="elude">Jugar</a>
+          
+        </p>
+  </div>
+  <div class="col-sm-6 col-md-4" id="espacio">
+    <div class="thumbnail calaveras" id="espacios2">
+      <div class="caption" >
+        <h3 >Calaveras</h3>	
+      </div>
+	  
+    </div>
+	<p>
+          <a href="#" class="btn btn-primary" role="button" value="Calaveras" id="calaveras">Jugar</a>
+          
+        </p>
+  </div>
+  </div>
+  </center>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section>
+  <center>
+  <div class="row">
+  <div class="col-sm-6 col-md-4" id="espacio">
+    <div class="thumbnail dosmil" id="espacios2">
+      
+      <div class="caption">
+        <h3>2048</h3>	
+      </div>
+    </div>
+	<p>
+          <a href="#" class="btn btn-primary" role="button" value="2048" id="2048">Jugar</a>
+          
+        </p>
+  </div>
+</div>
+</center>
+</section>
+<script src="{% static 'js/inicio.js' %}"></script>
+{% endblock content %}

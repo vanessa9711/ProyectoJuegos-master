@@ -1,0 +1,70 @@
+*{
+	font-size: 18px;
+	
+}
+.section-container{
+	padding-top: 2em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+}
+
+.bienvenido{
+	background-image: url('../imagenes/bienvenido.gif');
+	
+	
+}
+.llorona{
+background-image: url('../imagenes/llorona.jpg');
+border-radius: 90px;
+}
+#espacio{ height: 250px; width: 210px;}
+#espacios2{ height: 250px; width: 210px;}
+.calaveras{
+
+	background-image: url('../imagenes/calavera.jpg');
+	border-radius: 90px;
+}
+.asteroides{
+	background-image: url('../imagenes/asteroides.jpg');
+	border-radius: 90px;
+	
+}
+.dosmil{
+	background-image: url('../imagenes/dosmil.jpg');
+	border-radius: 90px;
+	
+}
+
+.col-btn{
+	text-align: center;
+}
+.btn-group-lg{
+	width: 90% px;
+}
+
+h3{
+	background-color: #914cb8;
+	color: #ffffff;
+	font-weight:bold;
+	background-size: 20% 50%;
+	border-radius: 90px;
+	
+}
+
+.btn-primary{
+	width:100px;
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	position:center;
+	background-color:#001998;
+	border:5px solid ;
+	border-color:#001998;
+	border-radius:10px;
+}
+.btn-primary:hover{
+	background-color:#57869b;
+	border-color:#57869b;
+}

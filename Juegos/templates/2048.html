@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load staticfiles%}
+
+    {% block style_content %}
+        <title> juego 2048 </title>
+        <link href="{% static '2048/style/main.css' %}" rel ="stylesheet" type ="text/css">
+        <script src="{% static '2048/scripts/Controlador/EntradaDeTeclado.js' %}"> </script>
+        <script src="{% static '2048/scripts/Vista/ManejoDOM.js' %}"> </script>
+        <script src="{% static '2048/scripts/Modelo/Cuadricula.js' %}"> </script>
+        <script src="{% static '2048/scripts/Modelo/Ficha.js' %}"> </script>
+        <script src="{% static '2048/scripts/Modelo/AdministradorJuego.js' %}"> </script>
+        <script src="{% static '2048/scripts/launcher.js' %}"> </script>
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+
+    {% endblock style_content %}
+    
+    {% block content %}
+        <div class="contenedor-general">
+            <div class="cabecera">
+                <h1 class="titulo"> <strong>2048</strong> </h1>
+                <div class="contenedor-puntajes">
+                    <div class="puntaje-actual">0</div>
+                </div>
+            </div>
+        <div class="acerca-del-juego">
+            <p class="intro-juego">Una los numeros y forme la ficha <strong>2048</strong></p>
+            <a class="reiniciar">Nuevo juego</a>
+            </div>
+        <div class="contenedor-tablero">
+            <div class="mensaje-final">
+                <p></p>
+                <div class="contenedor-botones">
+                    <a class="boton-seguir-jugando">Sigue Jugando</a>
+                    <a class="boton-reintentar">Intentar de nuevo</a>
+                </div> 
+            </div>
+            <div class="contenedor-cuadricula">
+            <div class="contenedor-filas">
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+            </div>
+            <div class="contenedor-filas">
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+            </div>
+            <div class="contenedor-filas">
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+            </div>
+            <div class="contenedor-filas">
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+                <div class="contenedor-celda"></div>
+            </div>
+        </div>
+             <div class="contenedor-ficha"></div>
+        </div>
+            <p>
+            <strong>¿Como jugar?:</strong> Use las flechas para mover las fichas, cuando dos fichas del mismo numero se tocan estas forman una sola ficha.
+            </p>
+            <hr>
+            <p>
+            Realizado por Juan Diego Avila, David Alejandro Aparicio y Jairo Andres Romero Triana
+            </p>
+        </div>        
+    {%endblock content%}

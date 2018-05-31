@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %} 
+	{% block style_content %}
+		<title>Juego Portal</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'calavera/default.css' %}" media="screen">
+		<script src="{% static 'js/jquery-3.2.1.min.js' %}" language="JavaScript1.2"></script>
+		<script src="{% static 'calavera/script.js' %}" language="JavaScript1.2"></script>
+	 {% endblock style_content %} 
+	 {% block content %}
+		<aside>
+			<img src="{% static 'calavera/movimientos/arriba1.png' %}" id="arriba1"></img>
+			<img src="{% static 'calavera/movimientos/arriba2.png' %}" id="arriba2"></img>
+			<img src="{% static 'calavera/movimientos/arriba3.png' %}" id="arriba3"></img>
+			<img src="{% static 'calavera/movimientos/derecha1.png' %}" id="derecha1"></img>
+			<img src="{% static 'calavera/movimientos/derecha2.png' %}" id="derecha2"></img>
+			<img src="{% static 'calavera/movimientos/derecha3.png' %}" id="derecha3"></img>
+			<img src="{% static 'calavera/movimientos/izquierda1.png' %}" id="izquierda1"></img>
+			<img src="{% static 'calavera/movimientos/izquierda2.png' %}" id="izquierda2"></img>
+			<img src="{% static 'calavera/movimientos/izquierda3.png' %}" id="izquierda3"></img>
+			<img src="{% static 'calavera/movimientos/abajo1.png' %}" id="abajo1"></img>
+			<img src="{% static 'calavera/movimientos/abajo2.png' %}" id="abajo2"></img>
+			<img src="{% static 'calavera/movimientos/abajo3.png' %}" id="abajo3"></img>
+			<img id="mina" src="{% static 'calavera/imagenes/bomba.png' %}"/><br>
+			<img id="portal" src="{% static 'calavera/imagenes/portal.png' %}"/><br>
+			<img id="explosion" src="{% static 'calavera/imagenes/explosion.png' %}"/><br>
+			
+			<div id="textDiv" >
+		</div>
+			
+		</aside>
+		<section>
+			<canvas id="lienzo" width="700" height="500">
+			
+				Tu navegador no es compatible
+			</canvas>
+			
+		</section>
+{% endblock content %}

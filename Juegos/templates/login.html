@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		{% load staticfiles %}
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+		<title>Login</title>
+	</head>
+	<body>
+		<section id="section-container">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-6 col-login">
+						<h4>PlatGames</h4><br>
+						<form method="POST">
+							{% csrf_token %}
+							<div class="form-group">
+								<label for="inputUsuario">Usuario:</label>
+								<input type="text" name="inputUsuario" id="inputUsuario" class="form-control" placeholder="Ingrese su usuario">
+							</div>
+							<div class="form-group">
+								<label for="inputContrasena">Contraseña:</label>
+								<input type="password" name="inputContrasena" id="inputContrasena" class="form-control" placeholder="Ingrese la Contraseña:">
+							</div>
+							<button type="submit" class="btn btn-outline-primary btn-block">Ingresar</button>
+						</form>
+						<div class="div-registro">
+							<p>¿No tienes cuenta?</p>
+							<a href="/registro" class="btn btn-outline-primary btn-block">Registrate</a>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</section>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		
+		<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+		<script src="{% static 'js/popper.js'%}"></script>
+		<script src = "{% static 'js/bootstrap.min.js' %}"></script>
+	</body>
+</html>

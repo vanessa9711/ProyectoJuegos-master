@@ -1,0 +1,30 @@
+body {
+	background-color:GREY;
+}
+
+section {
+	background-color:#333322;
+	border:2px solid;
+	border-color:#ffffff;
+	margin:2em;
+	padding:1em;
+	text-align: center;
+}
+
+aside {
+	float: right;
+	clear: none;
+	margin:2em;
+	padding:1em;
+	text-align: center;
+}
+
+canvas {
+	background:url('imagenes/fondo.jpg');
+	color:#ffffff;
+	border-color:#ffffff;
+}
+
+#portal,#mina, #explosion ,#arriba1,#arriba2,#arriba3,#izquierda1,#izquierda2,#izquierda3,#derecha1,#derecha2,#derecha3,#abajo1,#abajo2,#abajo3{
+	display:none;
+}

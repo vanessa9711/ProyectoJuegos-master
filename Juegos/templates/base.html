@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load staticfiles %}
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
+		
+		{% block style_content %}
+			
+		{% endblock style_content %}
+	</head>
+	<body>
+		<header id="header-container">
+			<div class="container-fluid">
+				<nav class="navbar navbar-expand-lg ">
+					<a class="navbar-brand" href="/inicio">Plataforma de Juegos</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+					<center>
+						<ul class="navbar-nav">
+							<li class="nav-item {{active_inicio}}">
+								<a class="nav-link" href="/inicio">Inicio</a>
+							</li>
+							<li class="nav-item {{active_puntajes}}">
+								<a class="nav-link" href="/inicio/puntajes">Puntajes</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Juegos
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="inicio/Llorona">La LLorona</a>
+									<a class="dropdown-item" href="inicio/EludeAsteroids">Elude Asteorids</a>
+									<a class="dropdown-item" href="inicio/Calaveras">Calaveras</a>
+									<a class="dropdown-item" href="inicio/2048">2048</a>
+									<a class="dropdown-item" href="inicio/Charizard">Charizard</a>
+								</div>
+							</li>
+						</ul>
+						</center>
+						<ul class="navbar-nav">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{user.first_name}} {{user.last_name}}</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="/logout">Salir</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+				</nav>
+			</div>
+		</header>
+		{% block content %}
+			
+		{% endblock content %}
+		<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+		<script src="{% static 'js/popper.js'%}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	</body>
+</html>

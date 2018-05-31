@@ -1,0 +1,31 @@
+*{
+	font-size: 16px
+}
+
+body{
+	background-color: #2B2C28;
+}
+
+section{
+	/*margin-top: 10em;*/
+}
+
+.col-login{
+	/*text-align: center;*/
+	background-color: white;
+	border-radius: 1.2em;
+	padding: 2em;
+}
+
+.col-login > h4{
+	text-align: center;
+}
+
+.div-registro{
+	margin-top: 2em;
+}
+
+.div-registro > p{
+	text-align: center;
+	margin-bottom: .5em;
+}

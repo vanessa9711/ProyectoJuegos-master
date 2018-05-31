@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+	{% block style_content %}
+		<title>Asteroids HTML5</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'EludeAsteroid/estilos.css' %}" media="screen">
+		<script src="{% static 'js/jquery-3.2.1.min.js' %}" language="JavaScript1.2"></script>
+		<script src="{% static 'EludeAsteroid/script.js' %}" language="JavaScript1.2"></script>
+	{% endblock style_content %}
+	{% block content %}
+		<aside>
+			<img id="ship" src="{% static 'EludeAsteroid/imagenes/ship.png' %}"/><br>
+			<img id="asteroid" src="{% static 'EludeAsteroid/imagenes/asteroid.png' %}"/><br>
+			<img id="explosion" src="{% static 'EludeAsteroid/imagenes/explosion.png' %}"/><br>
+			<h1>Elude Asteroids</h1>
+			<hr>
+			<h3>Controles del juego</h3>
+			<img id="contrles" src="{% static 'EludeAsteroid/imagenes/wasd.png' %}"/>
+			<img id="contrles" src="{% static 'EludeAsteroid/imagenes/arrows.png' %}"/>
+			<br>
+			<div id="recomendaciones"></div>
+			<button>iniciar</button>
+			<hr>
+			<p>Copyright @2014 Alejandro Paolo Daza</p>
+		</aside>
+		<section>
+			
+			<canvas id="lienzo" width="700" height="500">
+				Tu navegador no es compatible
+			</canvas>
+			
+			<audio id="brisa">
+				<source src="{% static 'EludeAsteroid/sonidos/brisa.ogg' %}" type="audio/ogg">
+				<source src="{% static 'EludeAsteroid/sonidos/brisa.mp3' %}" type="audio/mpeg">
+				Tu navegador no es compatible
+			</audio>
+			<audio id="explode">
+				<source src="{% static 'EludeAsteroid/sonidos/explode.ogg' %}" type="audio/ogg">
+				<source src="{% static 'EludeAsteroid/sonidos/explode.mp3' %}" type="audio/mpeg">
+				Tu navegador no es compatible
+			</audio> 
+			
+		</section>
+	{% endblock content %}

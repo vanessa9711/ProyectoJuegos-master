@@ -1,0 +1,19 @@
+body{
+    background-color: #2B2C28;
+}
+
+header{
+    margin: 1em 0;
+}
+
+.col-header{
+    border-radius: 1em;
+    background-color: white;
+    padding: .5em;
+}
+
+.col-registro{
+    border-radius: 1.2em;
+    background-color: white;
+    padding: 2em;
+}

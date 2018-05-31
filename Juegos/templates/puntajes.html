@@ -1,0 +1,184 @@
+{% extends 'base.html'%} 
+{% load staticfiles %} 
+
+{% block style_content %}
+<link rel="stylesheet" href="{% static 'css/puntajes.css' %}"> 
+{% endblock style_content %} 
+
+{% block content %}
+<section id="section-container">
+    <div class="container">
+        <div class="row align-items-middle">
+            <div class="col-12">
+                <h2>Puntajes</h2>
+                <p>Aqui podras ver tu puntaje personal y el top 5 de cada juego</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-titulo-tabla">
+                <h4>Puntajes Globales:</h3>
+                <p>Aca encontraras el top 5 de puntajes de los juegos</p>
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>Elude Asteroids</h5>
+                <ul class="list-group lista">
+                    {% for top in topElude %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{top.jugador}}
+                        <div>Puntaje: <span class="badge badge-dark badge-pill">{{top.puntaje}}</span></div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>La Llorona</h5>
+                <ul class="list-group lista">
+                    {% for top in topLlorona %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{top.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{top.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>Calaveras</h5>
+                <ul class="list-group lista">
+                    {% for top in topCalaveras %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{top.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{top.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>2048</h5>
+                <ul class="list-group lista">
+                    {% for top in top2048 %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{top.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{top.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>Charizard</h5>
+                <ul class="list-group lista">
+                    {% for top in topCharizard %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{top.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{top.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row row-puntaje">
+
+            <div class="col-12 col-titulo-tabla">
+                <h4>Puntajes Personales:</h3>
+                    <p>Aca encontraras tu historial de puntajes en cada juego</p>
+            </div>
+            
+        </div>
+
+        <div class="row justify-content-around">
+
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>Elude Asteroids</h5>
+                <ul class="list-group lista">
+                    {% for per in perElude %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{per.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{per.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>La Llorona</h5>
+                <ul class="list-group lista">
+                    {% for per in perLlorona %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{per.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{per.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>Calaveras</h5>
+                <ul class="list-group lista">
+                    {% for per in perCalaveras %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{per.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{per.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-around">
+
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>2048</h5>
+                <ul class="list-group lista">
+                    {% for per in per2048 %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{per.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{per.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="col-12 col-md-3 col-puntaje col-titulo-tabla">
+                <h5>Charizard</h5>
+                <ul class="list-group lista">
+                    {% for per in perCharizard %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{per.jugador}}
+                        <div>Puntaje:
+                            <span class="badge badge-dark badge-pill">{{per.puntaje}}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock content %}
